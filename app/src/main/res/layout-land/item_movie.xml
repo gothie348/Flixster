@@ -29,9 +29,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="225dp"
-        android:layout_marginLeft="225dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="7dp"
         android:text="Movie Title"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="73dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="67dp"
         android:text="TextView" />
 </RelativeLayout>
