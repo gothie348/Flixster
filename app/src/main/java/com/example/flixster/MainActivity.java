@@ -83,12 +83,12 @@ public class MainActivity extends AppCompatActivity {
                     JSONArray results= response.getJSONArray("results");
                     // iterate through result set and create movie objects
                     for (int i = 0; i< results.length(); i++){
-                        Movie movie =new Movie(results.getJSONObject(1));
+                        Movie movie =new Movie(results.getJSONObject(i));
                         movies.add(movie);
                          // notify adapter that a row was added
                         adapter.notifyItemInserted(movies.size()-1);
                     }
-                    Log.i(TAG, String.format("Loaded \\ movies", results.length()));
+                    Log.i(TAG, String.format("Loaded %s movies", results.length()));
                     // get the now playing movie list
                     getNowPlaying();
                 } catch (JSONException e) {
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                     config= new config(response);
 
                     Log.i(TAG,
-                            String.format("Loaded configuration with imageBaseUrl \\  and posterSize \\",
+                            String.format("Loaded configuration with imageBaseUrl %s  and posterSize %s",
                             config.getImageBaseUrl(),
                             config.getPosterSize() ));
                     // pass config to adapter
