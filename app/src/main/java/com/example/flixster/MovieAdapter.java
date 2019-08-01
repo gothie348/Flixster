@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -45,9 +44,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     }
 
     // creates and inflates a new view
-    @NonNull
+
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
         // get the context and create the inflater
         context = parent.getContext();
         LayoutInflater inflater =LayoutInflater.from(context);
@@ -58,7 +57,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     }
  // binds an inflated view to a new item
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         // get the movie data at the specified position
         Movie movie= movies.get(position);
         //populate the view with the movie data
@@ -108,7 +107,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         TextView tvTitle;
         TextView tvOverview;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder( View itemView) {
             super(itemView);
             //lookup view objects by id
             ivPosterImage=(ImageView) itemView.findViewById(R.id.ivPosterimage);
